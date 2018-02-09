@@ -1,0 +1,47 @@
+<div id="popup_settings_guest_block" class="modal-settings"
+     data-type="blocks" data-target="guest_block" data-name="settings_guest_block"
+     data-template="layouts/vlayout/modules/QuotingTool/resources/js/views/popups/settings_guest_block.html">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">{{ 'Settings' | translate }}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form">
+            <table class="table_settings_guest_block_fields">
+                <tbody>
+                <tr>
+                    <th>{{ 'Fields' | translate }}</th>
+                    <td>
+                        <select id="settings_guest_block_fields" class="quoting_tool-selector"
+                                vtiger-select2='{"sortable": true}' multiple
+                                ng-model="settings.guest_block.item_fields"
+                                ng-options="field as field.label group by field.block.label for field in guestBlockFields"
+                                custom-option-attributes="guestBlockFields">
+                            <option>-- {{ 'Select' | translate }} --</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ 'Theme' | translate }}</th>
+                    <td>
+                        <label class="table-theme-label" ng-repeat="item in tableBlockTheme">
+                            <input type="image"
+                            ng-src="{{item.image}}"
+                            ng-model="settings.guest_block.theme"
+                            ng-click="changeGuestBlockTheme($event, item)"
+                            ng-class="{'selected': settings.guest_block.theme == item}"
+                            alt="" class="table-theme-image">
+                        </label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-submit" ng-click="changeSetting($event)">{{ 'OK' | translate }}</button>
+    </div>
+</div>

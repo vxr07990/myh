@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+    <table>
+      <name>vtiger_import_relation</name>
+      <sql><![CDATA[CREATE TABLE `vtiger_import_relation` (
+  `importid` varchar(255) NOT NULL,
+  `crmid` int(11) NOT NULL,
+  `module` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></sql>
+    </table>
+	</tables>
+</schema>

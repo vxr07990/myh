@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_awsdocs</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_awsdocs` (
+  `awsdocsid` int(11) DEFAULT NULL,
+  `awsdocs_docid` varchar(25) DEFAULT NULL,
+  `awsdocs_docname` varchar(255) DEFAULT NULL,
+  `awsdocs_filename` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_awsdocscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_awsdocscf` (
+  `awsdocsid` int(11) NOT NULL,
+  PRIMARY KEY (`awsdocsid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_awsdocsattach</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_awsdocsattach` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `awsdoc_id` int(11) DEFAULT NULL,
+  `filename` varchar(250) DEFAULT NULL,
+  `bucketname` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_awsdocsettings</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_awsdocsettings` (
+  `aws_key` varchar(250) DEFAULT NULL,
+  `aws_secret` varchar(250) DEFAULT NULL,
+  `aws_bucket` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

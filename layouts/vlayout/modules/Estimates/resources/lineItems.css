@@ -1,0 +1,73 @@
+
+.lineItemsEdit {
+    position:relative;
+}
+
+.lietdmin100 {
+    min-width: 100px;
+}
+
+.lietdmin120 {
+    min-width: 120px;
+}
+
+.lietdmin150 {
+    min-width: 150px;
+}
+
+.lietdmin200 {
+    min-width: 200px;
+}
+
+.lietdmax50 {
+    max-width: 50px;
+}
+
+.lietdmax75 {
+    max-width: 75px;
+}
+
+.lietdmax100 {
+    max-width: 100px;
+}
+
+.lineItemsEdit table,
+.lineItemsEdit tbody,
+.lineItemsEdit thead,
+.lineItemsEdit td,
+.lineItemsEdit th,
+.lineItemsEdit div {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+.lineItemsEdit tbody td {
+    margin:0; padding:0;
+    padding-right:12px;
+}
+
+.lineItemsEdit input {
+    border:none;
+    width:100%;
+    height:100%;
+    font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+    font-size:12px;
+    padding: 0 4px 0 4px;
+
+}
+
+.lineItemsEdit input[type="checkbox"] {
+    border:none;
+    width:32px;
+    height:32px;
+    font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+    font-size:12px;
+    padding: 0 4px 0 4px;
+
+}
+
+.lineItemsEdit input:focus {
+    border:2px solid #5292F7;
+    outline: none;
+}

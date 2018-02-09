@@ -1,0 +1,98 @@
+<?php
+/*+***********************************************************************************
+ * The contents of this file are subject to the vtiger CRM Public License Version 1.0
+ * ("License"); You may not use this file except in compliance with the License
+ * The Original Code is:  vtiger CRM Open Source
+ * The Initial Developer of the Original Code is vtiger.
+ * Portions created by vtiger are Copyright (C) vtiger.
+ * All Rights Reserved.
+ *************************************************************************************/
+$languageStrings = array(
+    'AutoCreated'=>'AutoCreated',
+    'Cancel' => 'Cancel',
+    'Credit Invoice'=>'Credit Invoice',
+    'LBL_INVOICE_CUSTOMERNO' => 'Customer No',
+    'LBL_INVOICE_INVOICEDATE' => 'Invoice Date',
+    'LBL_INVOICE_INVOICENO' => 'Invoice No',
+    'LBL_ACTION'    => 'Action',
+    'LBL_ADD_RECORD' => 'Add Invoice',
+    'LBL_BALANCE' => 'Balance',
+    'LBL_EXPORT_TO_PDF' => 'Export to PDF',
+    'LBL_INVOICE_INFORMATION' => 'Invoice Details',
+    'LBL_CUSTOM_INFORMATION' => 'Custom Information',
+    'LBL_ADDRESS_INFORMATION' => 'Address Information',
+    'LBL_RELATED_PRODUCTS' => 'Related Products',
+    'LBL_TERMS_INFORMATION' => 'Terms Information',
+    'LBL_DESCRIPTION_INFORMATION' => 'Description Information',
+    'LBL_ITEM_DETAILS' => 'Item Details',
+    'LBL_IS_DELETED_FROM_THE_SYSTEM_PLEASE_REMOVE_OR_REPLACE_THIS_ITEM' => 'is deleted from the system.please remove or replace this item',
+    'LBL_NOT_A_BUNDLE' => 'Not a Bundle',
+    'LBL_RECEIVED' => 'Received',
+    'LBL_RECORDS_LIST' => 'Invoice List',
+    'LBL_SEND_MAIL_PDF' => 'Send Email with PDF',
+    'LBL_SUB_PRODUCTS'    => 'Sub Products',
+    'LBL_THIS_LINE_ITEM_IS_DELETED_FROM_THE_SYSTEM_PLEASE_REMOVE_THIS_LINE_ITEM' => 'This line item is deleted from the system,please remove this line items',
+    'LBL_THIS' => 'This',
+    'Paid'=>'Paid',
+    'LBL_INVOICE_PURCHASEORDER' => 'Purchase Order',
+    'Sales Commission' => 'Sales Commission',
+    'LBL_INVOICE_SALESORDER' => 'Sales Order',
+    'Sent'=>'Sent',
+    'SINGLE_Invoice' => 'Invoice',
+    'LBL_INVOICE_SUBJECT'=>'Subject',
+    'LBL_INVOICE_CONTACTNAME'=>'Contact Name',
+    'LBL_INVOICE_DUEDATE'=>'Due Date',
+    'LBL_INVOICE_ADJUSTMENT'=>'Adjustment',
+    'LBL_INVOICE_SALESCOMMISSION'=>'Sales Commision',
+    'LBL_INVOICE_EXICEDUTY'=>'Excise Duty',
+    'LBL_INVOICE_SUBTOTAL'=>'Sub Total',
+    'LBL_INVOICE_TOTAL'=>'Total',
+    'LBL_INVOICE_TAXTYPE'=>'Tax Type',
+    'LBL_INVOICE_DISCOUNTPERCENT'=>'Discount Percent',
+    'LBL_INVOICE_DISCOUNTAMOUNT'=>'Discount Amount',
+    'LBL_INVOICE_SHAMOUNT'=>'S&H Amount',
+    'LBL_INVOICE_ACCOUNTNAME'=>'Account Name',
+    'LBL_INVOICE_STATUS'=>'Status',
+    'LBL_INVOICE_ASSIGNEDTO'=>'Assigned To',
+    'LBL_INVOICE_CREATEDTIME'=>'CReated Time',
+    'LBL_INVOICE_MODIFIEDTIME'=>'Modified Time',
+    'LBL_INVOICE_LASTMODIFIEDBY'=>'Last Modified By',
+    'LBL_INVOICE_CURRENCY'=>'Currency',
+    'LBL_INVOICE_CONVERSIONRATE'=>'Conversion Rate',
+    'LBL_INVOICE_BILLINGADDRESS'=>'Billing Address',
+    'LBL_INVOICE_SHIPPINGADDRESS'=>'Shipping Address',
+    'LBL_INVOICE_BILLINGCITY'=>'Billing City',
+    'LBL_INVOICE_SHIPPINGCITY'=>'Shipping City',
+    'LBL_INVOICE_BILLINGSTATE'=>'Billing State',
+    'LBL_INVOICE_SHIPPINGSTATE'=>'Shipping State',
+    'LBL_INVOICE_BILLINGCODE'=>'Billing Code',
+    'LBL_INVOICE_SHIPPINGCODE'=>'Shipping Code',
+    'LBL_INVOICE_BILLINGCOUNTRY'=>'Billing Country',
+    'LBL_INVOICE_SHIPPINGCOUNTRY'=>'Shipping Country',
+    'LBL_INVOICE_BILLINGPOBOX'=>'Billing Po Box',
+    'LBL_INVOICE_SHIPPINGPOBOX'=>'Shipping Po Box',
+    'LBL_INVOICE_DESCRIPTION'=>'Description',
+    'LBL_INVOICE_TERMSCONDITIONS'=>'Terms & Conditions',
+    'LBL_INVOICE_ITEMNAME'=>'Item Name',
+    'LBL_INVOICE_QUANTITY'=>'Quantity',
+    'LBL_INVOICE_LISTPRICE'=>'List Price',
+    'LBL_INVOICE_ITEMCOMMENT'=>'Item Comment',
+    'LBL_INVOICE_DISCOUNT'=>'Discount',
+    'LBL_INVOICE_ITEMDISCOUNTPERCENT'=>'Item Discount Percent',
+    'LBL_INVOICE_TAX1'=>'Tax1',
+    'LBL_INVOICE_TAX2'=>'Tax2',
+    'LBL_INVOICE_TAX3'=>'Tax3',
+    'LBL_INVOICE_PRETAXTOTAL'=>'Pre Tax Total',
+    'LBL_INVOICE_RECEIVED'=>'Received',
+    'LBL_INVOICE_BALANCE'=>'Balance',
+    'LBL_INVOICE_SHPERCENT'=>'S&H Percent',
+    'LBL_INVOICE_CREATEDBY'=>'Created By',
+
+
+
+
+);
+
+$jsLanguageStrings = array(
+    'JS_PLEASE_REMOVE_LINE_ITEM_THAT_IS_DELETED' => 'Please remove line item that is deleted',
+);

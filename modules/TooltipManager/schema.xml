@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name></name>
+			<sql><![CDATA[]]></sql>
+		</table>
+	</tables>
+</schema>

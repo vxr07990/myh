@@ -1,0 +1,98 @@
+      html, body {
+        width:100%;
+        margin:0;
+        padding:0;
+      }
+      #container {
+        width:90%;
+        margin:auto;
+        min-height:100%;
+      }
+      #dispatch-left {
+        display:inline;
+
+        float:left;
+        width:60%;
+      }
+      #dispatch table {
+        width:100%;
+      }
+      #dispatch-right {
+        display:inline;
+        float:right;
+        width:38%;
+      }
+      #dispatch-orders th {
+        white-space:nowrap;
+      }
+      #dispatch-orders table,
+      #unassigned-orders  {
+        border-collapse:separate;
+        border-spacing:1px;
+        width:100%;
+        display:inline;
+      }
+      th {
+        background:#aaa;
+        padding:5px;
+        text-align:left;
+      }
+      td {
+        background:#ccc;
+        padding:5px;
+        border-top:1px solid #ddd;
+      }
+      .available {
+        background:#ccc url(ico_check.png) center center no-repeat;
+      }
+      .unavailable {
+        background:#ccc url(ico_x.png) center center no-repeat;
+      }
+      .warn {
+        background:#ccc url(ico_warn.png) center center no-repeat;
+      }
+      #dispatch-right table td:first-of-type {
+        width:24px;
+        height:24px;
+      }
+      h2 {
+        margin:0
+      }
+      fieldset {
+        border:1px solid #ccc;
+        border-radius:5px;
+        margin-bottom:15px;
+      }
+      #dispatch-people tr td:hover,
+      #dispatch-truck tr td:hover {
+        cursor:move
+      }
+      #dispatch-truck th:first-child,
+      #dispatch-people th:first-child {
+        width:24px%;
+      }
+      #dispatch-truck td {
+        width:29%;
+      }
+      #dispatch-people td {
+        width:16%;
+      }
+      #unassigned-orders th,
+      #unassigned-orders td,
+      #dispatch-orders th,
+      #dispatch-orders td,
+      #dispatch-people th,
+      #dispatch-people td,
+      #dispatch-truck th,
+      #dispatch-truck td,
+      a {
+        font-size:0.7em
+      }
+      #dispatch-container {
+        padding-top:50px;
+      }
+
+      #unassigned-calendar {
+        max-width:100%;
+        margin: 0 auto;
+      }

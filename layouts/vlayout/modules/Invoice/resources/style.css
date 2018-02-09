@@ -1,0 +1,24 @@
+.lineItemTable td.fieldValue{
+    padding: 0;
+    vertical-align: middle;
+    text-align:  center;
+    min-width: 100px;
+    min-height: 25px;
+}
+.lineItemTable thead .fieldLabel{
+    border-top: 1px solid #ddd !important;
+    height: 25px;
+}
+.lineItemTable .inline-table{
+    margin-bottom: 0;
+}
+.lineItemTable tfoot td{
+    padding: 5px;
+}
+.lineItemTable tfoot td.totalLabel{
+    text-align: right;
+    background: #f7f7f9;
+}
+.lineItemTable tfoot td.totalValue{
+    text-align:  center;
+}

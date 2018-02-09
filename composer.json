@@ -1,0 +1,95 @@
+{
+    "name": "igcsoftware/movecrm",
+    "minimum-stability": "dev",
+    "version": "1.0.0-dev",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ezyang/htmlpurifier",
+                "version": "3.3.0",
+                "dist": {
+                    "url": "https://github.com/ezyang/htmlpurifier/archive/v3.3.0.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": "~5.5",
+        "ext-json": "*",
+        "ext-mysqli": "*",
+        "ext-SPL": "*",
+        "ext-xml": "*",
+        "vlucas/phpdotenv": "2.1.*",
+        "twilio/sdk": "^4.5",
+        "danielstjules/stringy": "^2.1",
+        "ezyang/htmlpurifier": "^3.3",
+        "nesbot/carbon": "^1.21",
+        "php-ews/php-ews": "dev-master",
+        "symfony/yaml": "^3.0",
+        "illuminate/database": "^5.2",
+        "soundasleep/html2text": "^0.3.0",
+        "aws/aws-sdk-php": "^3.18",
+        "picqer/php-barcode-generator": "^0.2.1",
+        "respect/validation":"^1.1.14"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.1",
+        "consolidation/robo": "^0.5.4",
+        "symfony/var-dumper": "^2.7",
+        "codeception/specify": "^0.4.3",
+        "codeception/verify": "^0.3.0",
+        "filp/whoops": "^2.0"
+    },
+    "archive": {
+        "exclude": [
+            "*.bak",
+            "*.zip",
+            ".DS_Store",
+            ".env",
+            "codeception.yml",
+            "composer.phar",
+            "Vagrantfile",
+            "/.vagrant",
+            "/ansible",
+            "/cache/*.xml",
+            "/cache/*.zip",
+            "/cache/tempModuleDesigner",
+            "/logs",
+            "!/logs/.htaccess",
+            "!/logs/todel.txt.txt",
+            "/storage",
+            "!/storage/vtiger.txt",
+            "/test/templates_c",
+            "!/test/templates_c/vlayout/.keep",
+            "/tests",
+            "/user_privileges",
+            "!/user_privileges/audit_trail.php",
+            "!/user_privileges/default_module_view.php",
+            "!/user_privileges/enable_backup.php",
+            "!/user_privileges/index.html",
+            "!/user_privileges/sharing_privileges_1.php",
+            "!/user_privileges/user_privileges_1.php",
+            "/vendor"
+        ]
+    },
+    "autoload": {
+        "files": [
+            "libraries/htmlpurifier/library/HTMLPurifier.safe-includes.php"
+        ],
+        "psr-4": {
+            "Igc\\": "libraries/Igc/",
+            "MoveCrm\\": "libraries/MoveCrm/",
+            "Vtiger\\": "libraries/Vtiger/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "prepend-autoloader": false
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": []
+    }
+}

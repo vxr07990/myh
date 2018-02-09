@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_localcarrier</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_localcarrier` (
+  `localcarrierid` int(11) DEFAULT NULL,
+  `carrier_name` varchar(50) DEFAULT NULL,
+  `vanline_id` varchar(255) DEFAULT NULL,
+  `address1` varchar(100) DEFAULT NULL,
+  `address2` varchar(100) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `state` varchar(100) DEFAULT NULL,
+  `zip` varchar(10) DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `phone1` varchar(20) DEFAULT NULL,
+  `fax` varchar(20) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `mc_number` varchar(255) DEFAULT NULL,
+  `dot_number` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_localcarriercf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_localcarriercf` (
+  `localcarrierid` int(11) NOT NULL,
+  PRIMARY KEY (`localcarrierid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

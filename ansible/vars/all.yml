@@ -1,0 +1,29 @@
+---
+server:
+    install: '1'
+    packages: [vim, git, nodejs, npm]
+    timezone: UTC
+    locale: en_US.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: movecrm.dev, ip: 192.168.13.37, memory: '1536', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
+apache:
+    install: '1'
+    docroot: /vagrant
+    servername: movecrm.dev
+mysql:
+    install: '1'
+    root_password: ''
+    database: ''
+    user: ''
+    password: ''
+    dump: ''
+php:
+    install: '1'
+    ppa: php5
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-curl, php5-imap, php5-gd, php5-mysql]
+xdebug:
+    install: '1'
+composer:
+    install: '1'
+

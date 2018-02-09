@@ -1,0 +1,5 @@
+.contents a:not(.emailField)
+{
+	font-weight:800;
+	text-decoration:underline;
+}

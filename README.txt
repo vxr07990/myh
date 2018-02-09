@@ -1,0 +1,1 @@
+Replacing 11 year old changelog with placeholder text for now. This README file is to be revisited again.

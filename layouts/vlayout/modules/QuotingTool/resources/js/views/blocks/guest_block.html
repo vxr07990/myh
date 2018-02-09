@@ -1,0 +1,48 @@
+<div class="content-container block-handle"
+     data-id="layouts/vlayout/modules/QuotingTool/resources/js/views/blocks/guest_block.html">
+    <div class="content-editable">
+        <div contenteditable="true">
+            <div class="quoting_tool-cke-keep-element" style="overflow: hidden; overflow-x: auto;">
+                <table border="1" cellspacing="0" cellpadding="6"
+                       class="quoting_tool-cke-keep-element"
+                       data-table-type="guest_block" data-module="" data-guest-block=""
+                       style="width: 100%; border-collapse: collapse;">
+                    <thead title="Header">
+                    <tr class="thead-content" style="background-color: #f4f4f4;">
+                    </tr>
+                    </thead>
+                    <tbody title="Body">
+                    <tr>
+                        <td class="tbody-guestblock-start">#GUESTBLOC_START#</td>
+                    </tr>
+                    <tr class="tbody-content">
+                    </tr>
+                    <tr>
+                        <td class="tbody-guestblock-end">#GUESTBLOC_END#</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="quoting_tool-btn-options quoting_tool-btn-left-options">
+        <div class="doc-block__control btn--block-control doc-block__control--drag quoting_tool-btn-options-item"
+             ng-show="app.data.blocks.guest_block.layout.enable_move">
+            <i class="icon-align-justify"></i>
+        </div>
+    </div>
+
+    <div class="quoting_tool-btn-options quoting_tool-btn-right-options">
+        <div class="doc-block__control btn--block-control btn--block-control-settings quoting_tool-btn-options-item"
+             ng-show="app.data.blocks.guest_block.layout.enable_setting"
+             ng-click="setting($event, app.data.blocks.guest_block)">
+            <i class="icon-cog"></i>
+        </div>
+        <div class="doc-block__control btn--block-control btn--block-control-del quoting_tool-btn-options-item"
+             ng-show="app.data.blocks.guest_block.layout.enable_remove"
+             ng-click="remove($event)">
+            <i class="icon-trash"></i>
+        </div>
+    </div>
+</div>

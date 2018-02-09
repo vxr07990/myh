@@ -1,0 +1,17 @@
+﻿@font-face {
+   font-family: "helveticaneue";
+   src: url("ttfonts/HelveticaNeue.eot"); /* IE */
+   src: local("HelveticaNeue"), url("ttfonts/HelveticaNeue.ttf") format("truetype"); /*non-IE*/
+}
+
+@font-face {
+   font-family: "sun-exta";
+   src: url("ttfonts/Sun-ExtA.eot"); /* IE */
+   src: local("Sun-ExtA"), url("ttfonts/Sun-ExtA.ttf") format("truetype"); /*non-IE*/
+}
+
+@font-face {
+   font-family: "damase";
+   src: url("ttfonts/MPH 2B Damase.eot"); /* IE */
+   src: local("MPH 2B Damase"), url("ttfonts/MPH 2B Damase.ttf") format("truetype"); /*non-IE*/
+}

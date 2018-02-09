@@ -1,0 +1,575 @@
+<?php
+/*+***********************************************************************************
+ * The contents of this file are subject to the vtiger CRM Public License Version 1.0
+ * ("License"); You may not use this file except in compliance with the License
+ * The Original Code is:  vtiger CRM Open Source
+ * The Initial Developer of the Original Code is vtiger.
+ * Portions created by vtiger are Copyright (C) vtiger.
+ *
+ * All Rights Reserved.
+ *************************************************************************************/
+$languageStrings = array(
+
+    'LBL_OPPORTUNITIES_REFERRAL' => 'Referral',
+    'LBL_OPPORTUNITIES_NAME' => 'Name',
+    'LBL_OPPORTUNITIES_ADDRESS' => 'Address',
+    'LBL_OPPORTUNITIES_PHONE' => 'Phone',
+    'LBL_OPPORTUNITIES_EMAIL' => 'Email',
+	'LBL_OPPORTUNITIES_OPPORTUNITIESREASON' => 'Opportunities Reason',
+    'SINGLE_Potentials' => 'Opportunity',
+    'LBL_CUSTOM_INFORMATION' => 'Custom Information',
+    'LBL_DESCRIPTION_INFORMATION' => 'Description Information',
+    'LBL_POTENTIALS_NATIONALACCOUNT' => 'National Account Details',
+    'SINGLE_Opportunities' => 'Opportunity',
+    'LBL_OPPORTUNITIES_SOURCENAME' => 'Program Name',
+    'LBL_OPPORTUNITIES_PROGRAMNAME' => 'Source Name',
+    'LBL_OPPORTUNITIES_APPOINTMENTTYPE' => 'Appointment',
+
+    'LBL_OPPORTUNITY_REGISTRATIONINFO' => 'Registration Information',
+    'LBL_OPPORTUNITY_BILLINGINFO' => 'Billing Information',
+    'LBL_OPPORTUNITY_SERVICEPROVIDERS' => 'Service Providers',
+    'LBL_OPPORTUNITY_STSINFORMATION' => 'STS Information',
+    'LBL_OPPORTUNITY_AUTHORITYTYPE' => 'Authority Type',
+    'LBL_OPPORTUNITIES_LMPID' => 'LMP ID',
+    'LBL_OPPORTUNITIES_NONCONFORMINGPARAMS' => 'Non-conforming Reason',
+    'LBL_OPPORTUNITIES_NONCONFORMING' => 'Non-conforming',
+    'LBL_OPPORTUNITIES_WARMTRANSFER' => 'Warm Transfer',
+
+    'LBL_POTENTIALS_SEGMENT' => 'Segment',
+    'LBL_POTENTIALS_SEGMENTUSED' => 'Segment Used',
+    'LBL_POTENTIALS_SEGMENTDESCRIPTION' => 'Segment Description',
+
+    'LBL_STS_REGISTRATION' => 'STS Registration',
+    'LBL_STS_REGISTRATION' => 'STS Registration',
+    'LBL_REGISTER_STS' => 'STS Registration',
+    'LBL_OPPORTUNITY_BOOKERSPLIT' => 'Split Booking',
+    'LBL_OPPORTUNITY_ORIGINSPLIT' => 'Out of Area',
+    'LBL_OPPORTUNITY_REGISTERSTS' => 'STS Registration',
+    'LBL_OPPORTUNITY_STSRESPONSE' => 'STS Response',
+    'LBL_OPPORTUNITY_PAYMENTTYPE' => 'Payment Type',
+    'LBL_OPPORTUNITY_PAYMENTMETHOD' => 'Payment Method',
+    'LBL_OPPORTUNITY_AGMTID' => 'Agmt. Id',
+    'LBL_OPPORTUNITY_SUBAGMTNUMBER' => 'Sub-Agmt. Nbr.',
+    'LBL_OPPORTUNITY_NATIONALACCOUNTNUMBER' => 'National Acct. Nbr.',
+    'LBL_OPPORTUNITY_SELFHAUL' => 'Self Haul',
+    'LBL_OPPORTUNITY_EXPRESSSHIPMENT' => 'Express Shipment',
+    'LBL_OPPORTUNITY_CBSIND' => 'CBS Ind',
+    'LBL_OPPORTUNITY_BILLINGAPN' => 'Billing APN',
+    'LBL_OPPORTUNITY_CREDITCHECK' => 'Credit Check',
+    'LBL_OPPORTUNITY_REFNUMBER' => 'Ref Number',
+    'LBL_OPPORTUNITY_CREDITCHECKAMOUNT' => 'Credit Check Amount',
+    'LBL_OPPORTUNITY_REFTYPE' => 'Ref Type',
+    'LBL_OPPORTUNITY_BACODE' => 'Booking Agent Code',
+    'LBL_OPPORTUNITY_OACODE' => 'Origin Agent Code',
+    'LBL_OPPORTUNITY_EACODE' => 'Estimating Agent Code',
+    'LBL_OPPORTUNITY_DACODE' => 'Destination Agent Code',
+    'LBL_OPPORTUNITY_HACODE' => 'Hauling Agent Code',
+    'LBL_OPPORTUNITY_BACITY' => 'Booking Agent City',
+    'LBL_OPPORTUNITY_OACITY' => 'Origin Agent City',
+    'LBL_OPPORTUNITY_EACITY' => 'Estimating Agent City',
+    'LBL_OPPORTUNITY_DACITY' => 'Destination Agent City',
+    'LBL_OPPORTUNITY_HACITY' => 'Hauling Agent City',
+    'LBL_OPPORTUNITY_BASTATE' => 'Booking Agent State',
+    'LBL_OPPORTUNITY_OASTATE' => 'Origin Agent State',
+    'LBL_OPPORTUNITY_EASTATE' => 'Estimating Agent State',
+    'LBL_OPPORTUNITY_DASTATE' => 'Destination Agent State',
+    'LBL_OPPORTUNITY_HASTATE' => 'Hauling Agent State',
+    'LBL_OPPORTUNITY_BANAME' => 'Booking Agent Name',
+    'LBL_OPPORTUNITY_OANAME' => 'Origin Agent Name',
+    'LBL_OPPORTUNITY_EANAME' => 'Estimating Agent Name',
+    'LBL_OPPORTUNITY_DANAME' => 'Destination Agent Name',
+    'LBL_OPPORTUNITY_HANAME' => 'Hauling Agent Name',
+    'LBL_OPPORTUNITY_BRAND' => 'Brand',
+    'LBL_OPPORTUNITY_REGISTRATIONDATE' => 'Registration Date',
+    'LBL_REGISTRATION_NUMBER' => 'Registration Number',
+
+
+    'SINGLE_Opportunities Summary' => 'Opportunity Summary',
+    'SINGLE_Opportunities Details' => 'Opportunity Details',
+    'LBL_EXPECTED_CLOSE_DATE_ON' => 'Expected close date',
+    'LBL_POTENTIALS_CUSTOMINFORMATION' => 'Custom Information',
+    'LBL_POTENTIALS_ADDRESSDETAILS' => 'Address Details',
+    'LBL_POTENTIALS_AGENTS' => 'Agents',
+    'LBL_POTENTIALS_AMOUNT' => 'Amount',
+    'LBL_POTENTIALS_ASSIGNEDTO' => 'Assigned To',
+    'LBL_POTENTIALS_BUSINESSLINE' => 'Business Line',
+	'LBL_POTENTIALS_BUSINESSLINE_2' => 'Business Line',
+    'LBL_POTENTIALS_BUSINESSTYPE' => 'Business Type',
+    'LBL_POTENTIALS_CAMPAIGNSOURCE' => 'Campaign Source',
+    'LBL_POTENTIALS_CITY' => 'City',
+    'LBL_POTENTIALS_COMMERCIALMOVEDETAILS' => 'Commercial Move Details',
+    'LBL_POTENTIALS_CONTACTNAME' => 'Contact Name',
+    'LBL_POTENTIALS_COUNTRY' => 'Country',
+    'LBL_POTENTIALS_CREATEDBY' => 'Created By',
+    'LBL_POTENTIALS_CREATEDTIME' => 'Created Time',
+    'LBL_POTENTIALS_DATES' => 'Dates',
+    'LBL_POTENTIALS_DECISION' => 'Decision Date',
+    'LBL_POTENTIALS_DELIVER' => 'Deliver Date',
+	'LBL_POTENTIALS_DELIVERTO' => 'Deliver to Date',
+    'LBL_POTENTIALS_DESCRIPTION' => 'Description',
+    'LBL_POTENTIALS_DESTINATIONADDRESS1' => 'Destination Address 1',
+    'LBL_POTENTIALS_DESTINATIONADDRESS2' => 'Destination Address 2',
+    'LBL_POTENTIALS_DESTINATIONADDRESSCOUNTRY' => 'Destination Country',
+    'LBL_POTENTIALS_DESTINATIONADDRESSDESCRIPTION' => 'Destination Description',
+    'LBL_POTENTIALS_DESTINATIONADDRESSDETAILS' => 'Destination Address Details',
+    'LBL_POTENTIALS_DESTINATIONADDRESSFLIGHTSOFSTAIRS' => 'Destination Flights of Stairs',
+    'LBL_POTENTIALS_DESTINATIONCITY' => 'Destination City',
+    'LBL_POTENTIALS_DESTINATIONPHONE1' => 'Destination Phone 1',
+    'LBL_POTENTIALS_DESTINATIONPHONE2' => 'Destination Phone 2',
+    'LBL_POTENTIALS_DESTINATIONSTATE' => 'Destination State',
+    'LBL_POTENTIALS_DESTINATIONZIP' => 'Destination Zip',
+    'LBL_POTENTIALS_ESTIMATETYPE' => 'Estimate Type',
+    'LBL_POTENTIALS_EXPECTEDCLOSE' => 'Expected Close Date',
+    'LBL_POTENTIALS_FOLLOWUP' => 'Follow Up Date',
+    'LBL_POTENTIALS_FORECASTAMOUNT' => 'Forecast',
+    'LBL_POTENTIALS_INFORMATION' => 'Opportunity Details',
+    'LBL_POTENTIALS_INTERSTATEMOVEDETAILS' => 'Move Details',
+    'LBL_POTENTIALS_ISCONVERTEDFROMLEAD' => 'Converted from Lead',
+    'LBL_POTENTIALS_LASTMODIFIEDBY' => 'Last Modified By',
+    'LBL_POTENTIALS_LEADSOURCE' => 'Lead Source',
+    'LBL_POTENTIALS_LOAD' => 'Load Date',
+    'LBL_POTENTIALS_LOADTO' => 'Load To Date',
+    'LBL_POTENTIALS_LOCALMOVEDETAILS' => 'Local Move Details',
+    'LBL_POTENTIALS_MODIFIEDTIME' => 'Modified Time',
+    'LBL_POTENTIALS_NEXTSTEP' => 'Next Step',
+    'LBL_POTENTIALS_ORIGINADDRESS1' => 'Origin Address 1',
+    'LBL_POTENTIALS_ORIGINADDRESS2' => 'Origin Address 2',
+    'LBL_POTENTIALS_ORIGINADDRESSCOUNTRY' => 'Origin Country',
+    'LBL_POTENTIALS_ORIGINADDRESSDESCRIPTION' => 'Origin Description',
+    'LBL_POTENTIALS_ORIGINADDRESSDETAILS' => 'Origin Address Details',
+    'LBL_POTENTIALS_ORIGINADDRESSFLIGHTSOFSTAIRS' => 'Origin Flights of Stairs',
+    'LBL_POTENTIALS_ORIGINCITY' => 'Origin City',
+    'LBL_POTENTIALS_ORIGINPHONE1' => 'Origin Phone 1',
+    'LBL_POTENTIALS_ORIGINPHONE2' => 'Origin Phone 2',
+    'LBL_POTENTIALS_ORIGINSTATE' => 'Origin State',
+    'LBL_POTENTIALS_ORIGINZIP' => 'Origin Zip',
+    'LBL_POTENTIALS_PACK' => 'Pack Date',
+    'LBL_POTENTIALS_PACKTO' => 'Pack To Date',
+	'LBL_POTENTIALS_POBOX' => 'Address 2',
+	'LBL_RECORD_UPDATE_INFORMATION' => 'Record Update Information',
+
+    'LBL_POTENTIALS_POTENTIALNAME' => 'Opportunity Name',
+    'LBL_POTENTIALS_POTENTIALNUMBER' => 'Opportunity Number',
+    'LBL_POTENTIALS_PRICING' => 'Pricing Type',
+    'LBL_POTENTIALS_PROBABILITY' => 'Probability',
+    'LBL_POTENTIALS_RELATEDTO' => 'Account Name',
+    'LBL_POTENTIALS_SALESSTAGE' => 'Sales Stage',
+    'LBL_POTENTIALS_STATE' => 'State',
+	'LBL_POTENTIALS_STREET' => 'Address 1',
+	'LBL_OPPORTUNITIES_NATIONAL_ACCOUNT_NUMBER'=>'National Account Number',
+	'LBL_OPPORTUNITIES_STATUS'=>'Opportunity Status',
+	'LBL_OPPORTUNITIES_CONTRACT'=>'Contract',
+    'LBL_POTENTIALS_SURVEY' => 'Survey Date',
+    'LBL_POTENTIALS_SURVEYTIME' => 'Survey Time',
+	'LBL_POTENTIALS_ZIP' => 'Zip Code',
+    'LBL_POTENTIALS_BILLINGTYPE' => 'Billing Type',
+    'LBL_RELATED_CONTACTS' => 'Related Contacts',
+    'LBL_RELATED_ESTIMATES' => 'Estimates',
+    'LBL_PARTICIPATING_AGENTS_FULL' => 'Full Participating Agents',
+    'LBL_PARTICIPATING_AGENTS_NO_RATES' => 'No Rates Participating Agents',
+    'LBL_OPPORTUNITY_INFORMATION' => 'Opportunity Information',
+    'LBL_POTENTIAL_PPDATE'=>'Preferred Pack Date',
+    'LBL_POTENTIAL_PLDATE'=>'Preferred Load Date',
+    'LBL_POTENTIALS_PDDELIVER'=>'Preferred Deliver Date',
+    'LBL_POTENTIALS_PARTICIPANTS'=>'Participating Agents',
+    'LBL_POTENTIALS_SHIPPERTYPE'=>'Shipper Type',
+    'LBL_OPPORTUNITY_MOVETYPE' => 'Move Type',
+    'LBL_OPPORTUNITY_FUNDED' => 'Funded',
+    'LBL_OPPORTUNITY_NONCONFORMING' => 'Non Conforming',
+    'LBL_OPPORTUNITY_ENABLED' => 'Enabled',
+    'LBL_OPPORTUNITY_CONTACTNAME' => 'Contact Name',
+    'LBL_OPPORTUNITY_CONTACTEMAIL' => 'Contact Email',
+    'LBL_OPPORTUNITY_COMPANYNAME' => 'Company Name',
+    'LBL_OPPORTUNITY_CONTACTPHONE' => 'Contact Phone',
+    'LBL_OPPORTUNITY_EMPLOYERCOMMENTS' => 'Comments',
+    'LBL_OPPORTUNITY_SPECIALTERMS' => 'Special Terms',
+    'LBL_OPPORTUNITY_EMPLOYERASSISTING' => 'Employer Assisting',
+    'LBL_OPPORTUNITY_BUSINESSCHANNEL' => 'Shipper Type',
+    'LBL_OPPORTUNITY_OUTOFAREA' => 'Out of Area',
+    'LBL_OPPORTUNITY_OUTOFORIGIN' => 'Out of Origin',
+    'LBL_OPPORTUNITY_SMALLMOVE' => 'Small Move',
+    'LBL_OPPORTUNITY_PHONEESTIMATE' => 'Phone Estimate',
+	'LBL_OPPORTUNITY_PHONEESTIMATE' => 'Non Conforming',
+    'LBL_OPPORTUNITY_REQUESTEDMOVEDATE' => 'Requested Move Date',
+    'LBL_OPPORTUNITY_EXPECTEDDELIVERYDATE' => 'Expected Delivery Date',
+    'LBL_OPPORTUNITY_MOVINGAVEHICLE' => 'Moving a Vehicle',
+    'LBL_OPPORTUNITY_MARKETINGCHANNEL' => 'Marketing Channel',
+    'LBL_OPPORTUNITY_ORDERNUMBER' => 'Order Number',
+    'LBL_OPPORTUNITY_PROMOTIONCODE' => 'Promotion Code',
+    'LBL_OPPORTUNITY_FULFILLMENTDATE' => 'Fulfillment Date',
+    'LBL_OPPORTUNITY_ORIGINFAX' => 'Origin Fax',
+    'LBL_OPPORTUNITY_DESTINATIONFAX' => 'Destination Fax',
+    'LBL_OPPORTUNITY_ORIGINPHONE1TYPE' => 'Origin Phone 1 Type',
+    'LBL_OPPORTUNITY_ORIGINPHONE2TYPE' => 'Origin Phone 2 Type',
+    'LBL_OPPORTUNITY_DESTINATIONPHONE1TYPE' => 'Destination Phone 1 Type',
+    'LBL_OPPORTUNITY_DESTINATIONPHONE2TYPE' => 'Destination Phone 2 Type',
+    'LBL_OPPORTUNITY_ORIGINPHONE1EXT' => 'Origin Phone 1 Extension',
+    'LBL_OPPORTUNITY_ORIGINPHONE2EXT' => 'Origin Phone 2 Extension',
+    'LBL_OPPORTUNITY_DESTINATIONPHONE1EXT' => 'Destination Phone 1 Extension',
+    'LBL_OPPORTUNITY_DESTINATIONPHONE2EXT' => 'Destination Phone 2 Extension',
+
+
+
+    'LBL_OPPORTUNITY_OPPORTUNITYDETAILDISPOSITIONOTHER' => 'Lost Disposition Other',
+    'LBL_OPPORTUNITY_OPPORTUNITYDETAILDISPOSITIONLOST' => 'Lost Disposition Detail',
+    'LBL_OPPORTUNITY_OPPORTUNITYDISPOSITION' => 'Opportunity Disposition',
+    'LBL_OPPORTUNITY_OPPORTUNITYDETAILDISPOSITION' => 'Opportunity Detail Disposition',
+    'LBL_OPPORTUNITY_ASSIGNEDDATE' => 'Assigned Date',
+    'LBL_OPPORTUNITY_RECEIVEDATE' => 'Receive Date',
+    'LBL_OPPORTUNITY_PROGRAMTERMS' => 'Program Terms',
+    'LBL_OPPORTUNITY_DAYSTOMOVE' => 'Days to Move',
+    'LBL_OPPORTUNITY_EXTRASTOPS' => 'Extra Stops',
+    'LBL_OPPORTUNITY_STOPDESCRIPTION' => 'Name',
+    'LBL_OPPORTUNITY_STOPSEQUENCE' => 'Sequence',
+    'LBL_OPPORTUNITY_STOPWEIGHT' => 'Weight',
+    'LBL_OPPORTUNITY_STOPISPRIMARY' => 'Is Primary',
+    'LBL_OPPORTUNITY_STOPADDRESS1' => 'Address 1',
+    'LBL_OPPORTUNITY_STOPADDRESS2' => 'Address 2',
+    'LBL_OPPORTUNITY_STOPPHONE1' => 'Phone 1',
+    'LBL_OPPORTUNITY_STOPPHONE2' => 'Phone 2',
+    'LBL_OPPORTUNITY_STOPPHONE1TYPE' => 'Phone Type 1',
+    'LBL_OPPORTUNITY_STOPPHONE2TYPE' => 'Phone Type 2',
+    'LBL_OPPORTUNITY_STOPCITY' => 'City',
+    'LBL_OPPORTUNITY_STOPSTATE' => 'State',
+    'LBL_OPPORTUNITY_STOPCOUNTRY' => 'Country',
+    'LBL_OPPORTUNITY_STOPZIP' => 'Zip',
+    'LBL_OPPORTUNITY_STOPDATE' => 'Date',
+    'LBL_OPPORTUNITY_STOPCONTACT' => 'Contact Name',
+    'LBL_OPPORTUNITY_STOPTYPE' => 'Location Type',
+    'LBL_OPPORTUNITY_OPPTYPE' => 'Opportunity Type',
+    'LBL_OPPORTUNITY_SIRVASTOPTYPE' => 'Stop Type',
+    'XP1' => 'Extra Pickup 1',
+    'XP2' => 'Extra Pickup 2',
+    'XP3' => 'Extra Pickup 3',
+    'XP4' => 'Extra Pickup 4',
+    'XP5' => 'Extra Pickup 5',
+    'XD1' => 'Extra Delivery 1',
+    'XD2' => 'Extra Delivery 2',
+    'XD3' => 'Extra Delivery 3',
+    'XD4' => 'Extra Delivery 4',
+    'XD5' => 'Extra Delivery 5',
+    'OSIT' => 'OSIT',
+    'DSIT' => 'DSIT',
+    'OSTG' => 'Self Storage Pickup',
+    'DSTG' => 'Self Storage Delivery',
+    'OPRM' => 'Perm PU',
+    'DPRM' => 'Perm Del',
+    'LBL_OPP_ORDERNUMBER' => 'Order Number',
+    'LBL_BOOK_ORDER' => 'Book Order',
+
+    //need fixed
+    'LBL_ADD_RECORD' => 'Add Opportunity',
+    'LBL_RECORDS_LIST' => 'Opportunities List',
+
+    'Related To' => 'Related Account',
+    'LBL_RELATED_PRODUCTS' => 'Related Products',
+    'Closed Lost'=>'Closed Lost',
+    'Closed Won'=>'Closed Won',
+    'Existing Business'=>'Existing Business',
+    'Forecast' => 'Sales Forecast',
+    'Funnel' => 'Sales Funnel',
+    'Id. Decision Makers'=>'Identify Decision Makers',
+    'Needs Analysis'=>'Needs Analysis',
+    'Negotiation/Review'=>'Negotiation/Review',
+    'New Business'=>'New Business',
+    '--None--'=>'--None--',
+    'Perception Analysis'=>'Perception Analysis',
+    'Potentials by Stage' => 'Opportunities by Stage',
+    'Potentials' => 'Opportunities',
+    'Proposal/Price Quote'=>'Proposal/Quotation',
+    'Prospecting'=>'Prospecting',
+    'Qualification'=>'Qualification',
+    'Top Potentials' => 'Top Opportunities',
+    'Total Revenue' => 'Revenue by Salesperson',
+    'Value Proposition'=>'Value Proposition',
+
+    'LBL_OPPORTUNITIES_OPPORTUNITYTOLEAD' => 'Related Lead',
+    'LBL_POTENTIALS_MILEAGE' => 'Mileage',
+    'LBL_INTL_ONE_CLICK' => "Request international Quote",
+
+    'LBL_OPPORTUNITY_AGENTINFO' => 'Agent Info',
+    'LBL_TO_INTERNATIONAL' => 'To',
+    'LBL_TO_ATTENTION' => 'Attention',
+    'LBL_TO_REQUEST_DATE' => 'Request Date',
+    'LBL_FROM_AGENT_NAME' => 'Agent Name',
+    'LBL_FROM_AGENT_CODE' => 'Agent Code',
+    'LBL_REQUESTED_BY' => 'Requested By',
+    'LBL_FAX' => 'Fax',
+    'LBL_RESPONSE_BY' => 'Rate Response Needed By',
+    'LBL_EMAIL' => 'Email',
+
+    'LBL_OPPORTUNITY_QUOTEINFO' => 'Quote',
+    'LBL_TRANSFEREE_NAME' => 'Transferee Name',
+    'LBL_FIRST_REQUEST' => 'First Rate Request',
+    'LBL_PRIVATE_TRANSFEREE' => 'Private Transferee',
+    'LBL_REQUOTE' => 'Re-Quote',
+    'LBL_RATE_QUOTE' => 'Rate Quote#',
+    'LBL_ACCOUNT_NAME' => 'Account Name',
+
+    'LBL_OPPORTUNITY_LOCATIONDETAILS' => 'Origin/Destination',
+    'LBL_ORIGIN_TYPE' => 'Origin Type',
+    'LBL_ORIGIN_CITY_COUNTRY' => 'Origin City/Country',
+    'LBL_DESTINATION_TYPE' => 'Destination Type',
+    'LBL_DESTINATION_CITY_COUNTRY' => 'Destination City/Country',
+
+    'LBL_OPPORTUNITY_OTHERINFO' => 'Other Info',
+    'LBL_AIR_WEIGHT' => 'Est. Weight (lbs)',
+    'LBL_AIR_WEIGHT_TYPE' => 'Weight Type',
+    'LBL_AIR_VOLUME' => 'Est. Volume(ctf)',
+    'LBL_AIR_VOLUME_TYPE' => 'Volume Type',
+    'LBL_FCL_WEIGHT'        => 'Est. Weight (lbs)',
+    'LBL_AIR_PACKING_TYPE' => 'Packing Type',
+    'LBL_AIR_PACKING_TYPE_OTHER' => 'Other Packing Type',
+    'LBL_LCL_WEIGHT' => 'Est. Weight (lbs)',
+    'LBL_LCL_WEIGHT_TYPE' => 'Weight Type',
+    'LBL_LCL_VOLUME' => 'Est. Volume(ctf)',
+    'LBL_LCL_VOLUME_TYPE' => 'Volume Type',
+    'LBL_LCL_PACKING_TYPE' => 'Packing Type',
+    'LBL_LCL_PACKING_TYPE_OTHER' => 'Other Packing Type',
+    'LBL_FCL_WIEGHT' => 'Est. Weight (lbs)',
+    'LBL_FCL_WEIGHT_TYPE' => 'Weight Type',
+    'LBL_FCL_VOLUME' => 'Est. Volume(ctf)',
+    'LBL_FCL_VOLUME_TYPE' => 'Volume Type',
+    'LBL_FCL_PACKING_TYPE' => 'Packing Type',
+    'LBL_FCL_PACKING_TYPE_2' => 'Packing Type 2',
+    'LBL_FCL_PACKING_TYPE_OTHER' => 'Other Packing Type',
+    'LBL_VEHICLE_WEIGHT' => 'Est. Weight (lbs)',
+    'LBL_VEHICLE_CUBE' => 'Est. Volume(ctf)',
+    'LBL_VEHICLE_MAKE' => 'Make',
+    'LBL_VEHICLE_MODEL' => 'Model',
+    'LBL_VEHICLE_YEAR' => 'Year',
+    'LBL_VEHICLE_PACKING_TYPE' => 'Packing Type',
+    'LBL_VEHICLE_PACKING_OTHER' => 'Packing Type Other',
+    'LBL_SPECIAL_REQUIREMENTS' => 'Special Requirements',
+    'LBL_STORAGE' => 'Storage',
+    'LBL_INTL_QUOTE' => 'International Quote',
+    'LBL_LOCKMILITARY' => 'Lock Military Fields',
+
+    'LBL_OPPORTUNITIES_BLOCK_LEADDETAILS' => 'Lead Details',
+    'LBL_OPPORTUNITIES_BLOCK_HIDEDELETE' => 'Hide Delete',
+
+    'LBL_OPPORTUNITIES_LANGUAGE' => 'Language',
+    'LBL_OPPORTUNITIES_ORIGINELEVATOR' => 'Origin Elevator',
+    'LBL_OPPORTUNITIES_DESTINATIONELIVATOR' => 'Destination Elevator',
+    'LBL_OPPORTUNITIES_REWARDNUMBER' => 'Reward Number',
+    'LBL_OPPORTUNITIES_REWARDNUMBERTYPE' => 'Reward Number Type',
+    'LBL_OPPORTUNITIES_BLOCK_PAYMENTDETAILS' => 'Payment Details',
+    'LBL_OPPORTUNITIES_PAYMENTTYPE' => 'Payment Type',
+    'LBL_OPPORTUNITIES_DATEPAYMENTRECEIVED' => 'Payment Received Date',
+    'LBL_OPPORTUNITIES_CARDLASTFOUR' => 'Last 4 of Card',
+    'LBL_OPPORTUNITIES_CARDAUTHNUM' => 'Card Auth Number',
+    'LBL_OPPORTUNITIES_CARDOWNERNAME' => 'Name on Card',
+    'LBL_OPPORTUNITIES_CARDPHONENUM' => 'Phone Number on Card',
+    'LBL_GRR_ESTIMATE_VAL' => 'GRR Packing NTE',
+    'LBL_OPPORTUNITIES_COMPETITIVE' => 'Competitive',
+
+    'LBL_POTENTIALS_SENTTOMOBILE' => 'Sent To Mobile',
+    'LBL_TYPE_SEARCH_PHONE' =>'Search by Phone Number',
+
+
+    'LBL_OPPORTUNITIES_CONTACT_INFORMATION' => 'Contact Information',
+    'LBL_PRIMARY_CONTACT_EMAIL' => 'Contact Email',
+    'LBL_OPPS_FIRSTNAME' => 'First Name',
+    'LBL_OPPS_LASTNAME' => 'Last Name',
+    'LBL_OPPS_PHONENUMBER' => 'Primary Phone',
+    'LBL_OPPS_MOBILENUMBER' => 'Mobile Phone',
+    'LBL_OPPS_EMAIL' => 'Primary Email',
+    'LBL_OPPS_SECONDARYEMAIL' => 'Secondary Email',
+    'LBL_OPPS_COMPANY' => 'Company',
+    'LBL_OPPS_EMAILOPTOUT' => 'Email Opt Out',
+
+    'LBL_OPPORTUNITIES_CBSCONTACT' => 'Acct Contact Name',
+    'LBL_AVAILABLE_SURVEYORS' => 'Available Users',
+    'LBL_COMMODITIES' => 'Commodity',
+
+    'LBL_OPPORTUNITIES_REFERRAL_CONTACT' => 'Referral Name',
+    'LBL_OPPORTUNITIES_REFERRAL_THANKS' => 'Send Thank You',
+    'LBL_OPPORTUNITIES_REFERRAL_DATE' => 'Date Sent',
+
+    'LBL_REGISTER_OPPORTUNITY' => 'Register Opportunity',
+    'LBL_REGISTRATION_NOT_SETUP' => 'Registration is not setup',
+    'LBL_CANNOT_REGISTER_THIS_ID' => 'Cannot register this ID',
+    'LBL_REGISTRATION_FAILED' => 'Registration Failed',
+    'LBL_REGISTRATION_NO_WSDL' => 'No external registration service',
+);
+
+$jsLanguageStrings = array(
+    'JS_CALENDAR_VIEW_ADDED_SUCCESSFULLY' => 'Calendar View added successfully',
+    'JS_CALENDAR_VIEW_COLOR_UPDATED_SUCCESSFULLY' => 'Calendar view color updated successfully',
+    'JS_CALENDAR_VIEW_DELETE_CONFIRMATION' => 'Are you sure you want to delete this Calendar view ?',
+    'JS_CALENDAR_VIEW_DELETED_SUCCESSFULLY' => 'Calendar View deleted successfully',
+    'JS_EDIT_CALENDAR' => 'Edit Calendar',
+        'JS_FUTURE_EVENT_CANNOT_BE_HELD' => 'Cannot hold future event',
+    'JS_NO_CALENDAR_VIEWS_TO_ADD' => 'No Calendar View to add',
+        'JS_NO_DELETE_PERMISSION' => 'You do not have permission to delete calendar entries.',
+        'JS_NO_EDIT_PERMISSION' => 'You do not have permission to modify calendar entries.',
+        'JS_TASK_IS_SUCCESSFULLY_ADDED_TO_YOUR_CALENDAR' => 'To Do successfully added to your Calendar',
+        'JS_RECORD_DELETED' => 'Calendar entry deleted successfully',
+    'LBL_ADD_EVENT_TASK' => 'Add Event/To Do',
+    'LBL_ALL_DAY' => 'All-Day',
+    'LBL_APR' => 'Apr',
+    'LBL_APRIL' => 'April',
+    'LBL_AUG' => 'Aug',
+    'LBL_AUGUST' => 'August',
+    'LBL_CANT_SELECT_CONTACT_FROM_LEADS' => 'Cannot select related Contacts for Leads',
+    'LBL_DAY' => 'Day',
+    'LBL_DEC' => 'Dec',
+    'LBL_DECEMBER' => 'December',
+    'LBL_FEB' => 'Feb',
+    'LBL_FEBRUARY' => 'February',
+    'LBL_FRIDAY' => 'Friday',
+    'LBL_FRI' => 'Fri',
+    'LBL_JAN' => 'Jan',
+    'LBL_JANUARY' => 'January',
+    'LBL_JUL' => 'Jul',
+    'LBL_JULY' => 'July',
+    'LBL_JUNE' => 'June',
+    'LBL_JUN' => 'Jun',
+    'LBL_MARCH' => 'March',
+    'LBL_MAR' => 'Mar',
+    'LBL_MAY' => 'May',
+    'LBL_MAY' => 'May',
+    'LBL_MONDAY' => 'Monday',
+    'LBL_MON' => 'Mon',
+    'LBL_MONTH' => 'Month',
+    'LBL_NOVEMBER' => 'November',
+    'LBL_NOV' => 'Nov',
+    'LBL_OCTOBER' => 'October',
+    'LBL_OCT' => 'Oct',
+    'LBL_SAT' => 'Sat',
+    'LBL_SATURDAY' => 'Saturday',
+    'LBL_SEP' => 'Sep',
+    'LBL_SEPTEMBER' => 'September',
+    'LBL_SUNDAY' => 'Sunday',
+    'LBL_SUN' => 'Sun',
+    'LBL_THURSDAY' => 'Thursday',
+    'LBL_THU' => 'Thu',
+    'LBL_TODAY' => 'Today',
+    'LBL_TUESDAY' => 'Tuesday',
+    'LBL_TUE' => 'Tue',
+    'LBL_WEDNESDAY' => 'Wednesday',
+    'LBL_WED' => 'Wed',
+    'LBL_WEEK' => 'Week',
+    'Mobile Call' => 'Mobile Call',
+    'LBL_DEFAULT_SUCCESSFUL_REGISTRATION' => 'Successful registration',
+    'LBL_DEFAULT_FAILED_REGISTRATION' => 'Failed to register',
+);
+
+if (getenv('IGC_MOVEHQ')) {
+    $languageStrings['Prospecting']             = 'New';
+    $languageStrings['Qualification']           = 'Attempted to Contact';
+    $languageStrings['Needs Analysis']          = 'Survey Scheduled';
+    $languageStrings['Value Proposition']       = 'Pending';
+    $languageStrings['Id. Decision Makers']     = 'Cancelled';
+    $languageStrings['Perception Analysis']     = '';
+    $languageStrings['Proposal or Price Quote'] = 'Duplicate';
+    $languageStrings['Negotiation or Review']   = '';
+    $languageStrings['Amount']                  = 'Forecasted Amount';
+    //$languageStrings['Closed Won']				= 'Booked';
+    //$languageStrings['Closed Lost']				= 'Lost';
+    $languageStrings['Closed Won']  = 'Closed Won';
+    $languageStrings['Closed Lost'] = 'Closed Lost';
+    $languageStrings['LBL_OPPORTUNITIES_CUST_SVC_COORD'] = 'Coordinator';
+    $languageStrings['LBL_OPPS_CUST_SVC_COORD']          = 'Coordinator';
+    $languageStrings['Sales Stage']               = 'Opportunity Status';
+    $languageStrings['LBL_POTENTIALS_SALESSTAGE'] = 'Opportunity Status';
+    $languageStrings['Related To']               = 'Account';
+    $languageStrings['LBL_POTENTIALS_RELATEDTO'] = 'Account';
+    //OT15991 changes from Shipment to biling.
+    //$languageStrings['LBL_POTENTIALS_BILLINGTYPE'] = 'Shipment Type';
+    $languageStrings['LBL_POTENTIALS_BILLINGTYPE']        = 'Billing Type';
+    $languageStrings['LBL_OPPORTUNITIES_HHG_INFORMATION'] = 'HHG Information';
+    $languageStrings['LBL_POTENTIALS_INFORMATION']        = 'Opportunity Information';
+    $languageStrings['LBL_OPPORTUNITIES_ADDITIONAL_INFORMATION'] = 'Additional Opportunity Information';
+    $languageStrings['LBL_OPPORTUNITIES_STRATEGIC_RELATIONSHIP'] = 'Strategic Relationship';
+    $languageStrings['Type']                                     = 'Account Business Type';
+    $languageStrings['LBL_ALT_SALES_STAGE']       = 'Opportunity Status (MM HERE)';
+    $languageStrings['LBL_OPPORTUNITIES_REASON']  = 'Reason';
+    $languageStrings['LBL_OPPORTUNITIES_VANLINE'] = 'Vanline';
+    $languageStrings['LBL_AVAILABLE_SURVEYORS'] = 'Available Surveyors';
+}
+
+if (getenv('INSTANCE_NAME') === 'uvlc') {
+    $languageStrings['Forecast Amount'] = 'Ballpark Price';
+    $languageStrings['Interstate Move'] = 'Long Distance Unregistered';
+    $languageStrings['LBL_POTENTIALS_STATE'] = 'Province';
+    $languageStrings['LBL_POTENTIALS_ORIGINZIP'] = 'Origin Postal Code';
+    $languageStrings['LBL_POTENTIALS_ORIGINSTATE'] = 'Origin Province';
+    $languageStrings['LBL_POTENTIALS_DESTINATIONZIP'] = 'Destination Postal Code';
+    $languageStrings['LBL_POTENTIALS_DESTINATIONSTATE'] = 'Destination Province';
+    $languageStrings['LBL_OPPORTUNITY_STOPSTATE'] = 'Province';
+    $languageStrings['LBL_OPPORTUNITY_STOPZIP'] = 'Postal Code';
+} elseif (getenv('INSTANCE_NAME') == 'sirva') {
+    //$languageStrings['Consumer']                  = 'COD';
+    $languageStrings['Corporate']                 = 'NAT';
+    $languageStrings['Military']                  = 'MIL';
+    $languageStrings['Government']                = 'GVT';
+    $languageStrings['LBL_POTENTIALS_SALESSTAGE'] = 'Opportunity Disposition';
+    $languageStrings['LBL_OPPS_LEADTYPE']         = 'Opportunity Type';
+    $languageStrings['Prospecting']                = 'New';
+    $languageStrings['Qualification']            = 'Attempted Contact';
+    $languageStrings['Needs Analysis']            = 'Survey Scheduled';
+    $languageStrings['Value Proposition']        = 'Pending';
+    $languageStrings['Id. Decision Makers']        = 'Inactive';
+    $languageStrings['Perception Analysis']        = 'Ready to Book';
+    $languageStrings['Proposal or Price Quote'] = 'Duplicate';
+    $languageStrings['Negotiation or Review']    = '';
+    $languageStrings['Type']                    = 'Customer Type';
+    $languageStrings['Closed Won']                = 'Booked';
+    $languageStrings['Closed Lost']                = 'Lost';
+    $languageStrings['LBL_POTENTIALS_LOAD']    = 'Load From Date';
+    $languageStrings['LBL_POTENTIALS_LOADTO']    = 'Load To Date';
+    $languageStrings['LBL_POTENTIALS_PACK']    = 'Pack From Date';
+    $languageStrings['LBL_POTENTIALS_DELIVER']    = 'Deliver From Date';
+    $languageStrings['LBL_POTENTIALS_AMOUNT']   = 'Forecasted Amount';
+    $languageStrings['LBL_ASSIGNED_TO']   = 'Coordinator';
+    $languageStrings['Assigned To']   = 'Coordinator';
+    $languageStrings['LBL_POTENTIALS_ORIGINZIP']   = 'Origin Zip/Postal Code';
+    $languageStrings['LBL_POTENTIALS_DESTINATIONZIP']   = 'Destination Zip/Postal Code';
+    $languageStrings['LBL_POTENTIALS_ORIGINSTATE']   = 'Origin State/Province';
+    $languageStrings['LBL_POTENTIALS_DESTINATIONSTATE']   = 'Destination State/Province';
+    $languageStrings['Intrastate'] = 'Local/Intra';
+
+    // Vehicles Block
+    $languageStrings['LBL_OPPS_VEHICLES']   = 'Vehicles';
+    $languageStrings['LBL_OPPS_MOVINGVEHICLE']   = 'Moving a Vehicle';
+    $languageStrings['LBL_OPPS_NUMBEROFVEHICLES']   = 'No. of Vehicles';
+    $languageStrings['LBL_OPPS_VEHICLEYEAR']   = 'Year';
+    $languageStrings['LBL_OPPS_VEHICLEMAKE'] = 'Make';
+    $languageStrings['LBL_OPPS_VEHICLEMODEL'] = 'Model';
+} elseif (strtolower(getenv('INSTANCE_NAME')) == 'graebel') {
+    $languageStrings['Prospecting']                = 'New';
+    $languageStrings['Qualification']            = 'Attempted to Contact';
+    $languageStrings['Needs Analysis']            = 'Survey Scheduled';
+    $languageStrings['Value Proposition']        = 'Pending';
+    $languageStrings['Id. Decision Makers']        = 'Cancelled';
+    $languageStrings['Perception Analysis']        = '';
+    $languageStrings['Proposal or Price Quote'] = 'Duplicate';
+    $languageStrings['Negotiation or Review']    = '';
+    //$languageStrings['Closed Won']				= 'Booked';
+    //$languageStrings['Closed Lost']				= 'Lost';
+    $languageStrings['Closed Won']                = 'Closed Won';
+    $languageStrings['Closed Lost']                = 'Closed Lost';
+
+    $languageStrings['LBL_OPPORTUNITIES_CUST_SVC_COORD']    = 'Coordinator';
+    $languageStrings['LBL_OPPS_CUST_SVC_COORD']    = 'Coordinator';
+
+    $languageStrings['Sales Stage'] = 'Opportunity Status';
+    $languageStrings['LBL_POTENTIALS_SALESSTAGE'] = 'Opportunity Status';
+
+    $languageStrings['Related To'] = 'Account';
+    $languageStrings['LBL_POTENTIALS_RELATEDTO'] = 'Account';
+    //OT15991 changes from Shipment to biling.
+    //$languageStrings['LBL_POTENTIALS_BILLINGTYPE'] = 'Shipment Type';
+    $languageStrings['LBL_POTENTIALS_BILLINGTYPE'] = 'Billing Type';
+    $languageStrings['LBL_OPPORTUNITIES_HHG_INFORMATION'] = 'HHG Information';
+    $languageStrings['LBL_POTENTIALS_INFORMATION'] = 'Opportunity Information';
+
+    $languageStrings['LBL_OPPORTUNITIES_ADDITIONAL_INFORMATION'] = 'Additional Opportunity Information';
+    $languageStrings['LBL_OPPORTUNITIES_STRATEGIC_RELATIONSHIP'] = 'Strategic Relationship';
+    $languageStrings['Type'] = 'Account Business Type';
+
+    $languageStrings['LBL_ALT_SALES_STAGE'] = 'Opportunity Status (MM HERE)';
+    $languageStrings['LBL_OPPORTUNITIES_REASON'] = 'Reason';
+    $languageStrings['LBL_OPPORTUNITIES_VANLINE'] = 'Vanline';
+}

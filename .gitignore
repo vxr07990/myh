@@ -1,0 +1,73 @@
+##################################
+# this file may be group modified, but be curteous please.
+#
+# pattern rules: https://git-scm.com/docs/gitignore
+#
+# basically * is all match
+# ! is NOT this
+# x/ is dir x
+# /x is file in docroot.
+#
+# rules are sequential so last thing in file can override the first thing
+# NOTE: "quirks" exist in ruleset application
+#
+# To debug/check ignore rules:
+#
+# https://git-scm.com/docs/git-check-ignore
+# aka: git check-ignore --help
+##################################
+
+#exclude editor swap files
+*.swp
+*~
+
+#exclude SVN directories they are dead to us now:
+.svn/
+
+#exclude IDE directories:
+# phpstorm's directory.
+.idea/
+# yours?
+composer.lock
+
+#exclude composer installed files
+/vendor/*
+
+#exclude the .env EXCEPT ensure we don't exclude the .env.example.
+/.env
+!/.env.example
+
+#exclude temp files and file storage
+/tests/
+/test/
+/storage/
+
+#exclude the logs
+/logs/
+
+#exclude instance specifics like user_privs and tabdat
+/user_privileges/*
+/parent_tabdata.php
+/tabdata.php
+
+#exclude my own test harness.  add your own test harness or whatever here.
+/test.php
+/send*.php
+
+#don't exclude this file so we can all be the same
+!.gitignore
+
+#adding to ignore .bak and .orig files from merges
+*.bak
+*.orig
+
+# make sure that all .sql files are ignored
+*.sql
+
+# make sure any vagrant files are ignored as well
+.vagrant/
+Vagrantfile
+vagrant_provision.sh
+
+# ignore a mac file if anyone is using it
+.DS_Store

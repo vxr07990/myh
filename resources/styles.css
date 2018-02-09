@@ -1,0 +1,31 @@
+.clearfix {
+	clear: both;
+}
+.bootbox-invoice-settings {
+	margin: 0 auto;
+	width: 60%;
+	left: 20%;
+	top: 5% !important;
+}
+#Estimates_editView_fieldName_accesorial_ot_packing,#Estimates_editView_fieldName_accesorial_ot_unpacking{
+    margin-bottom: 5px;
+}
+.btnLoadTariff{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media {
+   div.blockUI.blockMsg.blockElement {
+         z-index: auto !important;
+     }
+     div#globalmodal1Container {
+         position: relative !important;
+     }
+		 div.blockUI.blockOverlay {
+			 	 z-index: auto !important;
+		 }
+}}
+
+.pac-container {
+    z-index: 500000 !important;
+}

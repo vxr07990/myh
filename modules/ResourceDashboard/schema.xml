@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_employees</name>
+			<sql><![CDATA[
+CREATE TABLE `vtiger_resourcedashboard` (`projecttaskid` INT(11) NULL DEFAULT NULL,`resourceid` INT(11) NULL DEFAULT NULL,`quantity` INT(11) NULL DEFAULT NULL) COLLATE='utf8_general_ci' ENGINE=InnoDB
+]]></sql>
+		</table>
+	</tables>
+</schema>

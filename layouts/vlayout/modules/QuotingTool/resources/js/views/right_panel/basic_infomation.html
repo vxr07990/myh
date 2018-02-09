@@ -1,0 +1,26 @@
+<table style="width: 100%;">
+    <tr>
+        <td>
+            <label class="muted pull-right">
+            <span class="redColor">*</span>{{ 'Owner' | translate }}
+            </label>
+        </td>
+        <td>
+             <select name="tmp_agentid" required="required" select2 style="width: 208px"
+                     ng-model="app.model.agentid"
+                     ng-options="id as agent for (id, agent) in app.data.agents">
+                 <option>-- {{ 'Select' | translate }} --</option>
+             </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="text" name="tmp_filename"
+                   placeholder="{{ 'Input file name here...' | translate }}" required="required"
+                   class="input-large nameField" ng-model="app.model.filename" />
+
+            <span class="mark-required">*</span>
+        </td>
+    </tr>
+</table>

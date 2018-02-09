@@ -1,0 +1,1 @@
+{include file="DetailBlock.tpl"|@vtemplate_path:$MODULE}

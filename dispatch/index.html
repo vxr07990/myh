@@ -1,0 +1,984 @@
+<!--<?php
+  $trucks = array(0=>'543',1=>'421',2=>'323',3=>'122');
+  $people = array(0=>'Tyson McTear',1=>'Paul Rodriguez');
+?>-->
+<!DOCTYPE html>
+<html lang="us">
+  <head>
+    <meta charset="utf-8">
+    <title>Dispatch Module</title>
+    <style type="text/css">
+      html, body {
+        width:100%;
+        margin:0;
+        padding:0;
+      }
+      #container {
+        width:90%;
+        margin:auto;
+        min-height:100%;
+      }
+      #dispatch-left {
+        display:inline;
+        
+        float:left;
+        width:60%;
+      }
+      #dispatch table {
+        width:100%;
+      }
+      #dispatch-right {
+        display:inline;
+        float:right;
+        width:38%;
+      }
+      #dispatch-orders th {
+        white-space:nowrap;
+      }
+      table {
+        border-collapse:separate;
+        border-spacing:1px;
+        width:100%;
+        display:inline;
+      }
+      th {
+        background:#aaa;
+        padding:5px;
+        text-align:left;
+      }
+      td {
+        background:#ccc;
+        padding:5px;
+        border-top:1px solid #ddd;
+      }
+      .available {
+        background:#ccc url(ico_check.png) center center no-repeat;
+      }
+      .unavailable {
+        background:#ccc url(ico_x.png) center center no-repeat;
+      }
+      .warn {
+        background:#ccc url(ico_warn.png) center center no-repeat;
+      }
+      #dispatch-right table td:first-of-type {
+        width:24px;
+        height:24px;
+      }
+      h2 {
+        margin:0
+      }
+      fieldset {
+        border:1px solid #ccc;
+        border-radius:5px;
+        margin-bottom:15px;
+      }
+      #dispatch-people tr td:hover,
+      #dispatch-truck tr td:hover {
+        cursor:move
+      }
+      #dispatch-truck th:first-child,
+      #dispatch-people th:first-child {
+        width:24px%;
+      }
+      #dispatch-truck td {
+        width:29%;
+      }
+      #dispatch-people td {
+        width:16%;
+      }
+      th, td, a {
+        font-size:0.7em
+      }
+      #dispatch-container {
+        padding-top:50px;
+      }
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="dispatch-tabs">
+        <ul>
+          <li><a href="#unassigned-orders">Unassigned Orders</a></li>
+          <li><a href="#dispatch">Dispatch</a></li>
+        </ul>
+
+        <div id="unassigned-orders">
+          <div style="overflow:auto;margin-bottom:30px;">
+            <fieldset id="dispatch-container">
+              <legend>Unassigned Orders</legend>
+
+              <form method="post" action="" style="position:absolute;left:45px;top:68px;margin-top:20px;margin-bottom:20px;">
+                <label for="dispatch-from">From</label>
+                <input type="text" id="dispatch-from" name="dispatch-from" />
+                <label for="dispatch-to">To</label>
+                <input type="text" id="dispatch-to" name="dispatch-to" />
+                <input type="submit" name="dispatch-date-submit" id="dispatch-date-submit" value="Search" />
+              </form>
+
+              <div style="overflow:scroll;height:330px;">
+                <table id="dispatch-orders">
+                  <tbody>
+                    <tr>
+                      <th>BOL#</th>
+                      <th>Reject</th>
+                      <th>Driver Notes</th>
+                      <th>Order Notes</th>
+                      <th>Pack Date</th>
+                      <th>Pack To Date</th>
+                      <th>Preferred Pack Date</th>
+                      <th>Load Date</th>
+                      <th>Load To Date</th>
+                      <th>Preferred Load Date</th>
+                      <th>Delivery Date</th>
+                      <th>Delivery To Date</th>
+                      <th>Preferred Delivery Date</th>
+                      <th>Transferee Name</th>
+                      <th>Order Number</th>
+                      <th>Account Name</th>
+                      <th>Service</th>
+                      <th>Crew Needed</th>
+                      <th>Vehicles Needed</th>
+                      <th>Estimated Hours</th>
+                      <th>Estimated Weight</th>
+                      <th>Estimated Cube</th>
+                      <th>Estimated Pieces</th>
+                      <th>Estimated Containers</th>
+                      <th>Estimated Crates</th>
+                      <th>Job Start Time</th>
+                      <th>Job End Time</th>
+                      <th>Assigned Crew Members</th>
+                      <th>Assigned Equipment</th>
+                      <th>Origin Address 1</th>
+                      <th>Origin Address 2</th>
+                      <th>Origin City</th>
+                      <th>Origin State</th>
+                      <th>Origin Zip</th>
+                      <th>Destination Address 1</th>
+                      <th>Destination Address 2</th>
+                      <th>Destination City</th>
+                      <th>Destination State</th>
+                      <th>Destination Zip</th>
+                      <th>Estimated Linehaul</th>
+                      <th>Estimated Order Total</th>
+                      <th>Contact Name</th>
+                      <th>Contact Phone</th>
+                      <th>Move Coordinator</th>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                    <tr>
+                      <td>4564545354</td>
+                      <td><input type="submit" id="" name="" value="Reject" style="font-weight:700;background:red;color:white;border:1px solid #000;border-radius:5px;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </fieldset>
+          </div>
+
+          <div style="overflow:auto;margin-bottom:30px;">
+            <fieldset id="dispatch-container">
+              <legend>Calendar</legend>
+              <img src="cal.jpg" alt="" style="margin:auto;text-align:center;display:block;" />
+            </fieldset>
+          </div>
+
+        </div>
+
+        <div id="dispatch" style="border:1px solid">
+
+          <div style="overflow:auto;margin-bottom:30px;">
+            <fieldset id="dispatch-container">
+              <legend>Day Book Activities</legend>
+
+              <form method="post" action="" style="position:absolute;left:45px;top:68px;margin-top:20px;margin-bottom:20px;">
+                <label for="unassigned-from">From</label>
+                <input type="text" id="unassigned-from" name="unassigned-from" />
+                <label for="unassigned-to">To</label>
+                <input type="text" id="unassigned-to" name="unassigned-to" />
+                <input type="submit" name="unassigned-date-submit" id="unassigned-date-submit" value="Search" />
+              </form>
+
+              <table id="dispatch-orders">
+                <tbody>
+                  <tr>
+                    <th>Status</th>
+                    <th>BOL#</th>
+                    <th>Driver Notes</th>
+                    <th>Order Notes</th>
+                    <th>Pack Date</th>
+                    <th>Pack To Date</th>
+                    <th>Preferred Pack Date</th>
+                    <th>Load Date</th>
+                    <th>Load To Date</th>
+                    <th>Preferred Load Date</th>
+                    <th>Delivery Date</th>
+                    <th>Delivery To Date</th>
+                    <th>Preferred Delivery Date</th>
+                    <th>Transferee Name</th>
+                    <th>Order Number</th>
+                    <th>Account Name</th>
+                    <th>Service</th>
+                    <th>Crew Needed</th>
+                    <th>Vehicles Needed</th>
+                    <th>Estimated Hours</th>
+                    <th>Estimated Weight</th>
+                    <th>Estimated Cube</th>
+                    <th>Estimated Pieces</th>
+                    <th>Estimated Containers</th>
+                    <th>Estimated Crates</th>
+                    <th>Job Start Time</th>
+                    <th>Job End Time</th>
+                    <th>Assigned Crew Members</th>
+                    <th>Assigned Equipment</th>
+                    <th>Origin Address 1</th>
+                    <th>Origin Address 2</th>
+                    <th>Origin City</th>
+                    <th>Origin State</th>
+                    <th>Origin Zip</th>
+                    <th>Destination Address 1</th>
+                    <th>Destination Address 2</th>
+                    <th>Destination City</th>
+                    <th>Destination State</th>
+                    <th>Destination Zip</th>
+                    <th>Estimated Linehaul</th>
+                    <th>Estimated Order Total</th>
+                    <th>Contact Name</th>
+                    <th>Contact Phone</th>
+                    <th>Move Coordinator</th>
+                  </tr>
+                  <tr>
+                    <td class="available"></td>
+                    <td>4564545354</td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                  </tr>
+                  <tr>
+                    <td class="warn"></td>
+                    <td>4564545354</td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                  </tr>
+                  <tr>
+                    <td class="available"></td>
+                    <td>4564545354</td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                  </tr>
+
+                  <tr>
+                    <td class="available"></td>
+                    <td>4564545354</td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                    <td><input type="submit" id="" name="" value="Notes" style="width:100%;" /></td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                      <td>Dummy Data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </fieldset>
+          </div>
+
+          <fieldset style="display:inline;width:48%;">
+            <legend>People</legend>
+            <table id="dispatch-people">
+              <tbody>
+                <tr>
+                  <th>Status</th>
+                  <th>Emp/Contractor Name</th>
+                  <th>Primary Role</th>
+                  <th>Available Hours</th>
+                  <th>Scheduled Hours</th>
+                  <th>Hours Worked in Week</th>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>Rodriguez, Luis</td>
+                  <td>Contractor</td>
+                  <td>40</td>
+                  <td>40</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="unavailable"></td>
+                  <td>Miller, Paul</td>
+                  <td>Employee</td>
+                  <td>40</td>
+                  <td>30</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>Anderson, Scott</td>
+                  <td>Employee</td>
+                  <td>22</td>
+                  <td>40</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>McTear, Tyson</td>
+                  <td>Employee</td>
+                  <td>10</td>
+                  <td>40</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>McTear, Tyson</td>
+                  <td>Employee</td>
+                  <td>10</td>
+                  <td>40</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>McTear, Tyson</td>
+                  <td>Employee</td>
+                  <td>10</td>
+                  <td>40</td>
+                  <td>40</td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+
+          <fieldset style="display:inline;width:48%;vertical-align:top;">
+            <legend>Trucks</legend>
+            <table id="dispatch-truck">
+              <tbody>
+                <tr>
+                  <th>Status</th>
+                  <th>Vehicle Number</th>
+                  <th>Vehicle Type</th>
+                  <th>Cube Capacity</th>
+                  <th>Hours Scheduled</th>
+                </tr>
+                <tr class="item">
+                  <td class="warn"></td>
+                  <td>1234</td>
+                  <td>Flatbed</td>
+                  <td>1234</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>1111</td>
+                  <td>Panel</td>
+                  <td>1234</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="available"></td>
+                  <td>1222</td>
+                  <td>Flatbed</td>
+                  <td>1234</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="unavailable"></td>
+                  <td>3321</td>
+                  <td>Flatbed</td>
+                  <td>1234</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="unavailable"></td>
+                  <td>3321</td>
+                  <td>Flatbed</td>
+                  <td>1234</td>
+                  <td>40</td>
+                </tr>
+                <tr class="item">
+                  <td class="unavailable"></td>
+                  <td>3321</td>
+                  <td>Flatbed</td>
+                  <td>1234</td>
+                  <td>40</td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+        </div>
+
+
+      </div>
+    </div>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script>
+      $(function(){
+        $( "#dispatch-tabs" ).tabs();
+
+        $("#dispatch-people tr:gt(0), #dispatch-truck tr:gt(0)").draggable({
+          revert: true,
+          helper: 'clone',
+          cursor: 'move'
+        });
+
+        $( "#dispatch-from" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 2,
+          onClose: function( selectedDate ) {
+            $( "#dispatch-to" ).datepicker( "option", "minDate", selectedDate );
+          }
+        });
+
+        $( "#dispatch-to" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 2,
+          onClose: function( selectedDate ) {
+            $( "#dispatch-from" ).datepicker( "option", "maxDate", selectedDate );
+          }
+        });
+
+        $( "#unassigned-from" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 2,
+          onClose: function( selectedDate ) {
+            $( "#unassigned-to" ).datepicker( "option", "minDate", selectedDate );
+          }
+        });
+
+        $( "#unassigned-to" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 2,
+          onClose: function( selectedDate ) {
+            $( "#unassigned-from" ).datepicker( "option", "maxDate", selectedDate );
+          }
+        });
+
+
+
+
+
+      });
+    </script>
+  </body>
+</html>

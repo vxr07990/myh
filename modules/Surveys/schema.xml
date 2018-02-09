@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_surveys</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_surveys` (
+  `surveysid` int(11) NOT NULL DEFAULT '0',
+    `survey_no` VARCHAR(32) DEFAULT NULL,
+    `survey_date` DATE DEFAULT NULL,
+    `surveyor` INT(11) DEFAULT NULL,
+    `survey_status` VARCHAR(128) DEFAULT NULL,
+    `account_id` INT(11) DEFAULT NULL,
+    `contact_id` INT(11) DEFAULT NULL,
+    `potential_id` INT(11) DEFAULT NULL,
+    PRIMARY KEY (`surveysid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_surveyscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_surveyscf` (
+  `surveysid` int(11) NOT NULL,
+  PRIMARY KEY (`surveysid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

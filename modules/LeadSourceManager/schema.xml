@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_leadsourcemanager</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_leadsourcemanager` (
+  `leadsourcemanagerid` int(11) DEFAULT NULL,
+  `source_name` varchar(50) DEFAULT NULL,
+  `agency_code` int(19) DEFAULT NULL,
+  `vanlinemanager_id` int(19) DEFAULT NULL,
+  `brand` varchar(10) DEFAULT NULL,
+  `lmp_program_id` int(19) DEFAULT NULL,
+  `lmp_source_id` int(19) DEFAULT NULL,
+  `marketing_channel` varchar(50) DEFAULT NULL,
+  `program_name` varchar(50) DEFAULT NULL,
+  `program_terms` varchar(255) DEFAULT NULL,
+  `source_type` varchar(50) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_leadsourcemanagercf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_leadsourcemanagercf` (
+  `leadsourcemanagerid` int(11) NOT NULL,
+  PRIMARY KEY (`leadsourcemanagerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

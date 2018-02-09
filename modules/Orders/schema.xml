@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_orders</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_orders` (
+  `ordersid` int(11) default NULL,
+  `ordersname` varchar(255) default NULL,
+  `orders_no` varchar(100) default NULL,
+  `startdate` date default NULL,
+  `targetenddate` date default NULL,
+  `actualenddate` date default NULL,
+  `targetbudget` varchar(255) default NULL,
+  `ordersurl` varchar(255) default NULL,
+  `ordersstatus` varchar(100) default NULL,
+  `orderspriority` varchar(100) default NULL,
+  `orderstype` varchar(100) default NULL,
+  `progress` varchar(100) default NULL,
+  `linktoaccountscontacts` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_orderscf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_orderscf` (
+  `ordersid` int(11) NOT NULL,
+  PRIMARY KEY  (`ordersid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

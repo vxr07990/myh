@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<schema>
+    <tables>
+        <table>vtiger_estimates</table>
+    </tables>
+</schema>

@@ -1,0 +1,25 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+# @see <http://www.php-fig.org/psr/psr-2/#2-2-files>
+insert_final_newline = true
+
+# @see <http://www.php-fig.org/psr/psr-2/#2-3-lines>
+trim_trailing_whitespace = true
+
+# @see <https://wiki.vtiger.com/index.php/CodingGuidelines#File_Format>
+charset = utf-8
+end_of_line = lf
+
+# @see <https://wiki.vtiger.com/index.php/CodingGuidelines#Indentation>
+indent_size = 4
+indent_style = space
+
+# The indent size used in the `package.json` file cannot be changed
+# @see <https://github.com/npm/npm/pull/3180#issuecomment-16336516>
+[package.json]
+indent_size = 2
+indent_style = space

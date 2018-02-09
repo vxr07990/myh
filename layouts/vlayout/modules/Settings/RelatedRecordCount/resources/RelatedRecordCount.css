@@ -1,0 +1,21 @@
+.colorpicker{
+    z-index: 10010 !important;
+}
+.vte-related-record-count td.listViewEntryValue, .listViewEntries td{
+    cursor: default;
+}
+.vte-related-record-count tbody .icon-move{
+    cursor: move !important;
+}
+.vte-primary-box .alert-info{
+    display: inline-block;
+    margin: 0;
+    min-width: 209px;
+    padding: 5px;
+}
+.vte-filter-box .alert-info{
+    display: block;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_orderstask</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_orderstask` (
+  `orderstaskid` int(11) NOT NULL,
+  `orderstaskname` varchar(255) default NULL,
+  `orderstask_no` varchar(100) default NULL,
+  `orderstasktype` varchar(100) default NULL,
+  `orderstaskpriority` varchar(100) default NULL,
+  `orderstaskprogress` varchar(100) default NULL,
+  `orderstaskhours` varchar(255) default NULL,
+  `startdate` date default NULL,
+  `enddate` date default NULL,
+  `ordersid` varchar(100) default NULL,
+  `orderstasknumber` int(11) default NULL,
+  PRIMARY KEY  (`orderstaskid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_orderstaskcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_orderstaskcf` (
+  `orderstaskid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`orderstaskid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

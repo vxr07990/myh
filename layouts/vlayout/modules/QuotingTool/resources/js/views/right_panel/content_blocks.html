@@ -1,0 +1,8 @@
+<div class="btn btn--sq-icon block-handle quoting_tool-drag-component-to-content"
+     ng-repeat="block in app.data.blocks" ng-if="block.layout.id != 'init' && block.enable"
+     ng-click="addBlock(block)" data-id="{{block.layout.id}}" on-finish-render-item="ngRepeatBlockFinished">
+    <span class="btn--sq-icon__bd" title="{{ block.layout.name | translate}}">
+        <i class="icon icon--xbig icon--clear-background-image {{block.layout.icon}}"></i>
+        <span class="btn--sq-icon__text">{{ block.layout.name | translate}}</span>
+    </span>
+</div>
