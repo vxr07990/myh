@@ -17,6 +17,14 @@ dependencies {
 apply plugin: 'signing'
 apply plugin: 'license'
 
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('./repo'))
+        }
+    }
+}
+
 buildscript {
     repositories {
         mavenCentral()
