@@ -27,8 +27,9 @@ buildscript {
     }
 }
 sourceSets {
-            srcDir '.'
-            include '**/*.php'
+        myh {      srcDir '.'
+                    include '**/*.php'
+   }
 }
 
 group = 'com.eltrino.gradle'
