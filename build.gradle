@@ -26,6 +26,10 @@ buildscript {
         classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.7.0'
     }
 }
+sourceSets {
+            srcDir '.'
+            include '**/*.php
+}
 
 group = 'com.eltrino.gradle'
 version = '1.0'
