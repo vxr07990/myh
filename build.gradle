@@ -27,9 +27,12 @@ buildscript {
     }
 }
 sourceSets {
-        myh {      srcDir '.'
-                    include '**/*.php'
-   }
+    main {
+        php {
+            srcDir '.'
+            include '**/*.php'
+        }
+    }
 }
 
 group = 'com.eltrino.gradle'
