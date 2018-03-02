@@ -27,13 +27,11 @@ buildscript {
     }
 }
 sourceSets {
-    main {
         php {
             srcDir '.'
             include '**/*.php'
         }
     }
-}
 
 group = 'com.eltrino.gradle'
 version = '1.0'
